@@ -1,4 +1,5 @@
-
+// firebase hosting site
+//https://homework-7-21c72.firebaseapp.com
  
   var config = {
     apiKey: "AIzaSyA_cwxPZCT-oNGwYxeVVFuqSKX3H-LgGbQ",
