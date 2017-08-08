@@ -16,6 +16,7 @@ $("#add-train-btn").on("click", function () {
         train: $('#train-name-input').val(),
         destination: $('#destination-input').val(),
         frequency: $('#frequency-input').val(),
+        time: $('')
         minutes: $('#minutes-away').append()
     });
 });
@@ -26,11 +27,14 @@ firebase.database().ref().on("child_added", function(snapshot){
   $("#train-table tbody").append(row);
 });
 
-// use moment.js for time
+// use moment.js for time of train
 $("#add-train-btn").on("click", function () {
   event.preventDefault();
+  var time = moment().format('LT');
   var userTime = $('#time-input').val();
   firebase.database().ref().push({
-    time: moment(userTime).format('LT')
+    
   })
 });
+
+// use a calculation to have next arrival and minutes away display correctly
